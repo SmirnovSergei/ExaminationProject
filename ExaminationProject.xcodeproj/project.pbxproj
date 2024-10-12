@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054A0B8A2CB967B30092F192 /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B892CB967B30092F192 /* TeamData.swift */; };
+		054A0B8C2CB9697C0092F192 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8B2CB9697C0092F192 /* CustomButton.swift */; };
+		054A0B8E2CB96D850092F192 /* AddViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8D2CB96D850092F192 /* AddViews.swift */; };
+		054A0B902CB9745E0092F192 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8F2CB9745E0092F192 /* ImageView.swift */; };
 		05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF520F2CB95C8900F68BE5 /* AppDelegate.swift */; };
 		05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */; };
 		05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52132CB95C8900F68BE5 /* ViewController.swift */; };
-		05EF52172CB95C8900F68BE5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05EF52162CB95C8900F68BE5 /* Base */; };
 		05EF52192CB95C8B00F68BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05EF52182CB95C8B00F68BE5 /* Assets.xcassets */; };
 		05EF521C2CB95C8B00F68BE5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05EF521B2CB95C8B00F68BE5 /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054A0B892CB967B30092F192 /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
+		054A0B8B2CB9697C0092F192 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		054A0B8D2CB96D850092F192 /* AddViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViews.swift; sourceTree = "<group>"; };
+		054A0B8F2CB9745E0092F192 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		05EF520C2CB95C8900F68BE5 /* ExaminationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExaminationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EF520F2CB95C8900F68BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		05EF52132CB95C8900F68BE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		05EF52162CB95C8900F68BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05EF52182CB95C8B00F68BE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05EF521B2CB95C8B00F68BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05EF521D2CB95C8B00F68BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +43,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		054A0B912CBAEBAD0092F192 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05EF52132CB95C8900F68BE5 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		054A0B922CBAEBC80092F192 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				054A0B8F2CB9745E0092F192 /* ImageView.swift */,
+				054A0B8B2CB9697C0092F192 /* CustomButton.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		054A0B932CBAEBD70092F192 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				054A0B892CB967B30092F192 /* TeamData.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		054A0B942CBAEBF40092F192 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				05EF521A2CB95C8B00F68BE5 /* LaunchScreen.storyboard */,
+				05EF52182CB95C8B00F68BE5 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		054A0B952CBAEBFF0092F192 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				054A0B8D2CB96D850092F192 /* AddViews.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		05EF52032CB95C8900F68BE5 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +106,11 @@
 			children = (
 				05EF520F2CB95C8900F68BE5 /* AppDelegate.swift */,
 				05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */,
-				05EF52132CB95C8900F68BE5 /* ViewController.swift */,
-				05EF52152CB95C8900F68BE5 /* Main.storyboard */,
-				05EF52182CB95C8B00F68BE5 /* Assets.xcassets */,
-				05EF521A2CB95C8B00F68BE5 /* LaunchScreen.storyboard */,
+				054A0B912CBAEBAD0092F192 /* ViewController */,
+				054A0B922CBAEBC80092F192 /* CustomElements */,
+				054A0B932CBAEBD70092F192 /* Services */,
+				054A0B942CBAEBF40092F192 /* Resourses */,
+				054A0B952CBAEBFF0092F192 /* Extensions */,
 				05EF521D2CB95C8B00F68BE5 /* Info.plist */,
 			);
 			path = ExaminationProject;
@@ -127,7 +176,6 @@
 			files = (
 				05EF52192CB95C8B00F68BE5 /* Assets.xcassets in Resources */,
 				05EF521C2CB95C8B00F68BE5 /* Base in Resources */,
-				05EF52172CB95C8900F68BE5 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +188,17 @@
 			files = (
 				05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */,
 				05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */,
+				054A0B8A2CB967B30092F192 /* TeamData.swift in Sources */,
+				054A0B8E2CB96D850092F192 /* AddViews.swift in Sources */,
 				05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */,
+				054A0B902CB9745E0092F192 /* ImageView.swift in Sources */,
+				054A0B8C2CB9697C0092F192 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		05EF52152CB95C8900F68BE5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05EF52162CB95C8900F68BE5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		05EF521A2CB95C8B00F68BE5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +340,6 @@
 				INFOPLIST_FILE = ExaminationProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -328,7 +371,6 @@
 				INFOPLIST_FILE = ExaminationProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
