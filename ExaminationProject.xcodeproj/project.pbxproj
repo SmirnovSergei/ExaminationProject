@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		054A0B8A2CB967B30092F192 /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B892CB967B30092F192 /* TeamData.swift */; };
 		054A0B8C2CB9697C0092F192 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8B2CB9697C0092F192 /* CustomButton.swift */; };
-		054A0B8E2CB96D850092F192 /* AddViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8D2CB96D850092F192 /* AddViews.swift */; };
+		054A0B8E2CB96D850092F192 /* UIStackView+addStackViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8D2CB96D850092F192 /* UIStackView+addStackViews.swift */; };
 		054A0B902CB9745E0092F192 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8F2CB9745E0092F192 /* ImageView.swift */; };
+		0573F3F62CBEE57C00C1E53B /* PersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0573F3F52CBEE57C00C1E53B /* PersonManager.swift */; };
+		0573F3F82CBEE64500C1E53B /* PersonDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0573F3F72CBEE64500C1E53B /* PersonDataManager.swift */; };
+		0573F3FA2CBEE87300C1E53B /* UIView+addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0573F3F92CBEE87200C1E53B /* UIView+addSubviews.swift */; };
 		05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF520F2CB95C8900F68BE5 /* AppDelegate.swift */; };
 		05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */; };
 		05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52132CB95C8900F68BE5 /* ViewController.swift */; };
@@ -21,8 +24,11 @@
 /* Begin PBXFileReference section */
 		054A0B892CB967B30092F192 /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
 		054A0B8B2CB9697C0092F192 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		054A0B8D2CB96D850092F192 /* AddViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViews.swift; sourceTree = "<group>"; };
+		054A0B8D2CB96D850092F192 /* UIStackView+addStackViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+addStackViews.swift"; sourceTree = "<group>"; };
 		054A0B8F2CB9745E0092F192 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		0573F3F52CBEE57C00C1E53B /* PersonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonManager.swift; sourceTree = "<group>"; };
+		0573F3F72CBEE64500C1E53B /* PersonDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataManager.swift; sourceTree = "<group>"; };
+		0573F3F92CBEE87200C1E53B /* UIView+addSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubviews.swift"; sourceTree = "<group>"; };
 		05EF520C2CB95C8900F68BE5 /* ExaminationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExaminationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EF520F2CB95C8900F68BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				054A0B892CB967B30092F192 /* TeamData.swift */,
+				0573F3F52CBEE57C00C1E53B /* PersonManager.swift */,
+				0573F3F72CBEE64500C1E53B /* PersonDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -80,7 +88,8 @@
 		054A0B952CBAEBFF0092F192 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				054A0B8D2CB96D850092F192 /* AddViews.swift */,
+				054A0B8D2CB96D850092F192 /* UIStackView+addStackViews.swift */,
+				0573F3F92CBEE87200C1E53B /* UIView+addSubviews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,12 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0573F3FA2CBEE87300C1E53B /* UIView+addSubviews.swift in Sources */,
+				0573F3F62CBEE57C00C1E53B /* PersonManager.swift in Sources */,
 				05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */,
 				05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */,
 				054A0B8A2CB967B30092F192 /* TeamData.swift in Sources */,
-				054A0B8E2CB96D850092F192 /* AddViews.swift in Sources */,
+				054A0B8E2CB96D850092F192 /* UIStackView+addStackViews.swift in Sources */,
 				05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */,
 				054A0B902CB9745E0092F192 /* ImageView.swift in Sources */,
+				0573F3F82CBEE64500C1E53B /* PersonDataManager.swift in Sources */,
 				054A0B8C2CB9697C0092F192 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

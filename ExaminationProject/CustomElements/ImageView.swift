@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ImageView: UIView {
-    private let imageView = UIImageView()
+class ImageView: UIImageView {
     
     init(imageName: String) {
         super.init(frame: .zero)
         setupImageView(imageName)
-        setupLayout()
     }
     
     @available(*, unavailable)
@@ -22,31 +20,15 @@ class ImageView: UIView {
     }
     
     func updateImage(_ imageName: String) {
-        imageView.image = UIImage(named: imageName)
+        image = UIImage(named: imageName)
     }
 }
 
 // MARK: - Setup Image View
 private extension ImageView {
     func setupImageView(_ imageName: String) {
-        imageView.image = UIImage(named: imageName)
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
-        
-        addSubview(imageView)
-    }
-}
-
-// MARK: - Setup Image Layout
-private extension ImageView {
-    func setupLayout() {
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        image = UIImage(named: imageName)
+        clipsToBounds = true
+        contentMode = .scaleAspectFit
     }
 }

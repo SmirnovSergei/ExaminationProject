@@ -10,12 +10,18 @@ import UIKit
 class ViewController: UIViewController {
     private let vStackView = UIStackView()
     private let hStackView = UIStackView()
+    
     private let imageView = ImageView(imageName: "investor")
+    
     private let positionLabel = UILabel()
     private let textLabel = UILabel()
-    private let lastButton = CustomButton(textButton: "Last", bgColor: .systemTeal, textColor: .white, shadow: true)
-    private let nextButton = CustomButton(textButton: "Next", bgColor: .white, textColor: .black, shadow: true)
-    private let firstButton = CustomButton(textButton: "First", bgColor: .systemRed, textColor: .white, shadow: false)
+    
+    private let lastButton = CustomButton(textButton: "Last", bgColor: .systemTeal, textColor: .white, isShadow: true)
+    private let nextButton = CustomButton(textButton: "Next", bgColor: .white, textColor: .black, isShadow: true)
+    private let firstButton = CustomButton(textButton: "First", bgColor: .systemRed, textColor: .white, isShadow: false)
+    
+    var personData: PersonManageable?
+    //= PersonDataManager(persons: PersonManager().getPersons())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,42 +39,55 @@ class ViewController: UIViewController {
 private extension ViewController {
     func addAction() {
         let lastAction = UIAction { _ in
-            let lastPerson = personData.getLastPerson()
-            self.imageView.updateImage(lastPerson.imageName)
-            self.positionLabel.text = lastPerson.position
-            self.textLabel.text = lastPerson.information
+            if let lastPerson = self.personData?.getLastPerson() {
+                self.setPersonQueue(lastPerson)
+                
+            } else {
+                self.positionLabel.text = "Значение не задано"
+            }
         }
         
         let nextAction = UIAction { _ in
-            let nextPerson = personData.getNextPerson()
-            self.imageView.updateImage(nextPerson.imageName)
-            self.positionLabel.text = nextPerson.position
-            self.textLabel.text = nextPerson.information
+            if let nextPerson = self.personData?.getNextPerson() {
+                self.setPersonQueue(nextPerson)
+                
+            } else {
+                self.positionLabel.text = "Значение не задано"
+            }
         }
         
         let firstAction = UIAction { _ in
-            let firstPerson = personData.getFirstPerson()
-            self.imageView.updateImage(firstPerson.imageName)
-            self.positionLabel.text = firstPerson.position
-            self.textLabel.text = firstPerson.information
+            if let firstPerson = self.personData?.getFirstPerson() {
+                self.setPersonQueue(firstPerson)
+                
+            } else {
+                self.positionLabel.text = "Значение не задано"
+            }
         }
-        
-        lastButton.addAction(lastAction, for: .touchUpInside)
-        nextButton.addAction(nextAction, for: .touchUpInside)
-        firstButton.addAction(firstAction, for: .touchUpInside)
     }
+        
+    func setPersonQueue(_ personQueue: PersonModel) {
+        let personQueue = personQueue
+        self.imageView.updateImage(personQueue.imageName)
+        self.positionLabel.text = personQueue.position
+        self.textLabel.text = personQueue.information
+    }
+    
+    lastButton.addAction(lastAction, for: .touchUpInside)
+    nextButton.addAction(nextAction, for: .touchUpInside)
+    firstButton.addAction(firstAction, for: .touchUpInside)
 }
-
+    
 // MARK: - Setup Views
 private extension ViewController {
     func setupLabels() {
-        positionLabel.text = personData.getCurrentPerson().position
+        positionLabel.text = personData?.getCurrentPerson().position
         positionLabel.font = .systemFont(ofSize: 30, weight: .bold)
         positionLabel.textAlignment = .center
         positionLabel.textColor = .black
         
         textLabel.numberOfLines = 0
-        textLabel.text = personData.getCurrentPerson().information
+        textLabel.text = personData?.getCurrentPerson().information
         textLabel.font = .systemFont(ofSize: 20)
         textLabel.textAlignment = .justified
         textLabel.textColor = .black
@@ -94,7 +113,6 @@ private extension ViewController {
     func setupLayout() {
         vStackView.translatesAutoresizingMaskIntoConstraints = false
         hStackView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         firstButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -112,11 +130,9 @@ private extension ViewController {
             
             hStackView.bottomAnchor.constraint(equalTo: firstButton.topAnchor, constant: -70),
             hStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            hStackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
             
             firstButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
             firstButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }
-

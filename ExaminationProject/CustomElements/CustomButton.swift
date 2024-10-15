@@ -9,20 +9,24 @@ import UIKit
 
 class CustomButton: UIButton {
     
-    init(textButton: String, bgColor: UIColor, textColor: UIColor, shadow: Bool) {
+    init(textButton: String, bgColor: UIColor, textColor: UIColor, isShadow: Bool) {
         super.init(frame: .zero)
-        setupButton(text: textButton, bgColor: bgColor, textColor: textColor, shadow: shadow)
+        setupButton(text: textButton, bgColor: bgColor, textColor: textColor, shadow: isShadow)
         
-        if shadow {
+        if isShadow {
             setupShadow()
             layoutSubviews()
         }
-        
-        setupLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let shadowPath = UIBezierPath(rect: bounds)
+        layer.shadowPath = shadowPath.cgPath
     }
 }
 
@@ -44,24 +48,3 @@ private extension CustomButton {
         layer.shadowRadius = 7
     }
 }
-
-// MARK: - Setup Button Layout
-extension CustomButton {
-    private func setupLayout() {
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: topAnchor),
-            bottomAnchor.constraint(equalTo: bottomAnchor),
-            leadingAnchor.constraint(equalTo: leadingAnchor),
-            trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        let shadowPath = UIBezierPath(rect: bounds)
-        layer.shadowPath = shadowPath.cgPath
-    }
-}
-

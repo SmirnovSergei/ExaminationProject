@@ -17,6 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         // Создаем окно для сцена
         window = UIWindow(windowScene: windowScene)
+        
+        let personData = PersonDataManager(persons: PersonManager().getPersons())
+        let viewController = ViewController()
+        viewController.personData = personData
+        
         // Устанавливаем корневой контроллер в окне
         window?.rootViewController = ViewController()
         // Отображаем окно на экране
