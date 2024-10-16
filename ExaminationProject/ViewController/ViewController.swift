@@ -11,7 +11,8 @@ class ViewController: UIViewController {
     private let vStackView = UIStackView()
     private let hStackView = UIStackView()
     
-    private let imageView = ImageView(imageName: "investor")
+    // Как сделать дефолтное значение для этой опциональной картинки???
+    private let imageView = ImageView(imageName:  personData?.getCurrentPerson().imageName ?? "investor")
     
     private let positionLabel = UILabel()
     private let textLabel = UILabel()
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
     private let firstButton = CustomButton(textButton: "First", bgColor: .systemRed, textColor: .white, isShadow: false)
     
     var personData: PersonManageable?
-    //= PersonDataManager(persons: PersonManager().getPersons())
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
 // MARK: - Button's Action
 private extension ViewController {
     func addAction() {
+        // В экшене не передается инфа в опциоанл
         let lastAction = UIAction { _ in
             if let lastPerson = self.personData?.getLastPerson() {
                 self.setPersonQueue(lastPerson)
@@ -64,6 +66,10 @@ private extension ViewController {
                 self.positionLabel.text = "Значение не задано"
             }
         }
+        
+        lastButton.addAction(lastAction, for: .touchUpInside)
+        nextButton.addAction(nextAction, for: .touchUpInside)
+        firstButton.addAction(firstAction, for: .touchUpInside)
     }
         
     func setPersonQueue(_ personQueue: PersonModel) {
@@ -72,10 +78,6 @@ private extension ViewController {
         self.positionLabel.text = personQueue.position
         self.textLabel.text = personQueue.information
     }
-    
-    lastButton.addAction(lastAction, for: .touchUpInside)
-    nextButton.addAction(nextAction, for: .touchUpInside)
-    firstButton.addAction(firstAction, for: .touchUpInside)
 }
     
 // MARK: - Setup Views
