@@ -11,8 +11,7 @@ class ViewController: UIViewController {
     private let vStackView = UIStackView()
     private let hStackView = UIStackView()
     
-    // Как сделать дефолтное значение для этой опциональной картинки???
-    private let imageView = ImageView(imageName:  personData?.getCurrentPerson().imageName ?? "investor")
+    private let imageView = ImageView(imageName: "investor")
     
     private let positionLabel = UILabel()
     private let textLabel = UILabel()
@@ -39,7 +38,6 @@ class ViewController: UIViewController {
 // MARK: - Button's Action
 private extension ViewController {
     func addAction() {
-        // В экшене не передается инфа в опциоанл
         let lastAction = UIAction { _ in
             if let lastPerson = self.personData?.getLastPerson() {
                 self.setPersonQueue(lastPerson)

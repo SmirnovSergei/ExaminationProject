@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         viewController.personData = personData
         
         // Устанавливаем корневой контроллер в окне
-        window?.rootViewController = ViewController()
+        window?.rootViewController = viewController
         // Отображаем окно на экране
         window?.makeKeyAndVisible()
     }
