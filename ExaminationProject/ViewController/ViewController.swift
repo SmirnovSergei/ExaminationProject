@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     
     var personData: PersonManageable?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

@@ -22,12 +22,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController = ViewController()
         viewController.personData = personData
         
+        printDescription()
+        
         // Устанавливаем корневой контроллер в окне
         window?.rootViewController = viewController
         // Отображаем окно на экране
         window?.makeKeyAndVisible()
     }
 
+    private func printDescription() {
+        let sortedPersonData = PersonManager().getPersons().sorted(by: <)
+        
+        for person in sortedPersonData {
+            print("\(person.description)\n")
+        }
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
