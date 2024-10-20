@@ -24,59 +24,60 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lastButton.delegate = self
+        nextButton.delegate = self
+        firstButton.delegate = self
+        
         view.backgroundColor = .white
         setupStackViews()
         setupLabels()
         view.addSubviews(vStackView, hStackView, firstButton)
-        addAction()
         
         setupLayout()
     }
 }
 
-// MARK: - Button's Action
-private extension ViewController {
-    func addAction() {
-        let lastAction = UIAction { _ in
-            if let lastPerson = self.personData?.getLastPerson() {
-                self.setPersonQueue(lastPerson)
-                
-            } else {
-                self.positionLabel.text = "Значение не задано"
-            }
-        }
-        
-        let nextAction = UIAction { _ in
-            if let nextPerson = self.personData?.getNextPerson() {
-                self.setPersonQueue(nextPerson)
-                
-            } else {
-                self.positionLabel.text = "Значение не задано"
-            }
-        }
-        
-        let firstAction = UIAction { _ in
-            if let firstPerson = self.personData?.getFirstPerson() {
-                self.setPersonQueue(firstPerson)
-                
-            } else {
-                self.positionLabel.text = "Значение не задано"
-            }
-        }
-        
-        lastButton.addAction(lastAction, for: .touchUpInside)
-        nextButton.addAction(nextAction, for: .touchUpInside)
-        firstButton.addAction(firstAction, for: .touchUpInside)
-    }
-        
-    func setPersonQueue(_ personQueue: PersonModel) {
-        let personQueue = personQueue
-        self.imageView.updateImage(personQueue.imageName)
-        self.positionLabel.text = personQueue.position
-        self.textLabel.text = personQueue.information
-    }
-}
-    
+ // MARK: - ICustomButtonDelegate
+extension ViewController: ICustomButtonDelegate {
+     func pressedButton(_ button: UIButton) {
+         switch button {
+         case lastButton:
+             if let lastPerson = self.personData?.getLastPerson() {
+                 self.setPersonQueue(lastPerson)
+                 
+             } else {
+                 self.positionLabel.text = "Значение не задано"
+             }
+             
+         case nextButton:
+             if let nextPerson = self.personData?.getNextPerson() {
+                 self.setPersonQueue(nextPerson)
+                 
+             } else {
+                 self.positionLabel.text = "Значение не задано"
+             }
+             
+         case firstButton:
+             if let firstPerson = self.personData?.getFirstPerson() {
+                 self.setPersonQueue(firstPerson)
+                 
+             } else {
+                 self.positionLabel.text = "Значение не задано"
+             }
+             
+         default:
+             break
+         }
+     }
+         
+     func setPersonQueue(_ personQueue: PersonModel) {
+         let personQueue = personQueue
+         self.imageView.updateImage(personQueue.imageName)
+         self.positionLabel.text = personQueue.position
+         self.textLabel.text = personQueue.information
+     }
+ }
+
 // MARK: - Setup Views
 private extension ViewController {
     func setupLabels() {

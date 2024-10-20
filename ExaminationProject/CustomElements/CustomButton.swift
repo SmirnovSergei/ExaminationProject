@@ -7,11 +7,18 @@
 
 import UIKit
 
+protocol ICustomButtonDelegate {
+    func pressedButton (_ button: UIButton)
+}
+
 class CustomButton: UIButton {
+    
+    var delegate: ICustomButtonDelegate?
     
     init(textButton: String, bgColor: UIColor, textColor: UIColor, isShadow: Bool) {
         super.init(frame: .zero)
         setupButton(text: textButton, bgColor: bgColor, textColor: textColor, shadow: isShadow)
+        addAction()
         
         if isShadow {
             setupShadow()
@@ -27,6 +34,16 @@ class CustomButton: UIButton {
         super.layoutSubviews()
         let shadowPath = UIBezierPath(rect: bounds)
         layer.shadowPath = shadowPath.cgPath
+    }
+}
+
+// MARK: - Button's Action
+extension CustomButton {
+    private func addAction() {
+        let action = UIAction { _ in
+            self.delegate?.pressedButton(self)
+        }
+        addAction(action, for: .touchUpInside)
     }
 }
 
