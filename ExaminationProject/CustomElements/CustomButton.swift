@@ -12,6 +12,7 @@ protocol ICustomButtonDelegate {
 }
 
 class CustomButton: UIButton {
+    var buttonNameInstance: String?
     
     var delegate: ICustomButtonDelegate?
     

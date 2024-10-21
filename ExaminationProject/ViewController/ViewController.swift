@@ -27,7 +27,15 @@ class ViewController: UIViewController {
         lastButton.delegate = self
         nextButton.delegate = self
         firstButton.delegate = self
+        lastButton.buttonNameInstance = "Last button"
+        nextButton.buttonNameInstance = "Next button"
+        firstButton.buttonNameInstance = "First button"
         
+        imageView.imageNameInstance = "Image view"
+
+        view.printButtonViewsQuantity(lastButton, nextButton, firstButton)
+        view.printAllSubviews(lastButton, nextButton, firstButton, imageView)
+
         view.backgroundColor = .white
         setupStackViews()
         setupLabels()

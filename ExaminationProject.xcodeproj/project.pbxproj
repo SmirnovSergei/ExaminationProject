@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		054A0B8A2CB967B30092F192 /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B892CB967B30092F192 /* TeamData.swift */; };
+		054A0B8A2CB967B30092F192 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B892CB967B30092F192 /* PersonModel.swift */; };
 		054A0B8C2CB9697C0092F192 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8B2CB9697C0092F192 /* CustomButton.swift */; };
 		054A0B8E2CB96D850092F192 /* UIStackView+addStackViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8D2CB96D850092F192 /* UIStackView+addStackViews.swift */; };
 		054A0B902CB9745E0092F192 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8F2CB9745E0092F192 /* ImageView.swift */; };
+		0565FE1A2CC6C57C007BEFCA /* UIView+print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565FE192CC6C57C007BEFCA /* UIView+print.swift */; };
 		0573F3F62CBEE57C00C1E53B /* PersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0573F3F52CBEE57C00C1E53B /* PersonManager.swift */; };
 		0573F3F82CBEE64500C1E53B /* PersonDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0573F3F72CBEE64500C1E53B /* PersonDataManager.swift */; };
 		0573F3FA2CBEE87300C1E53B /* UIView+addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0573F3F92CBEE87200C1E53B /* UIView+addSubviews.swift */; };
 		058E19A72CC50E21005906D0 /* CompareImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058E19A62CC50E21005906D0 /* CompareImageName.swift */; };
 		058E19A92CC50FE2005906D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058E19A82CC50FE2005906D0 /* Assets.xcassets */; };
 		058E19AC2CC51E8B005906D0 /* CustomStringConvertation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058E19AB2CC51E8B005906D0 /* CustomStringConvertation.swift */; };
-		058E19AE2CC520A9005906D0 /* PrintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058E19AD2CC520A9005906D0 /* PrintDescription.swift */; };
 		05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF520F2CB95C8900F68BE5 /* AppDelegate.swift */; };
 		05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */; };
 		05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52132CB95C8900F68BE5 /* ViewController.swift */; };
@@ -25,17 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		054A0B892CB967B30092F192 /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
+		054A0B892CB967B30092F192 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		054A0B8B2CB9697C0092F192 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		054A0B8D2CB96D850092F192 /* UIStackView+addStackViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+addStackViews.swift"; sourceTree = "<group>"; };
 		054A0B8F2CB9745E0092F192 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		0565FE192CC6C57C007BEFCA /* UIView+print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+print.swift"; sourceTree = "<group>"; };
 		0573F3F52CBEE57C00C1E53B /* PersonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonManager.swift; sourceTree = "<group>"; };
 		0573F3F72CBEE64500C1E53B /* PersonDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataManager.swift; sourceTree = "<group>"; };
 		0573F3F92CBEE87200C1E53B /* UIView+addSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubviews.swift"; sourceTree = "<group>"; };
 		058E19A62CC50E21005906D0 /* CompareImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareImageName.swift; sourceTree = "<group>"; };
 		058E19A82CC50FE2005906D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058E19AB2CC51E8B005906D0 /* CustomStringConvertation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStringConvertation.swift; sourceTree = "<group>"; };
-		058E19AD2CC520A9005906D0 /* PrintDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintDescription.swift; sourceTree = "<group>"; };
 		05EF520C2CB95C8900F68BE5 /* ExaminationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExaminationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EF520F2CB95C8900F68BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,8 +75,7 @@
 		054A0B932CBAEBD70092F192 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				054A0B892CB967B30092F192 /* TeamData.swift */,
-				058E19AD2CC520A9005906D0 /* PrintDescription.swift */,
+				054A0B892CB967B30092F192 /* PersonModel.swift */,
 				0573F3F52CBEE57C00C1E53B /* PersonManager.swift */,
 				0573F3F72CBEE64500C1E53B /* PersonDataManager.swift */,
 			);
@@ -96,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				054A0B8D2CB96D850092F192 /* UIStackView+addStackViews.swift */,
+				0565FE192CC6C57C007BEFCA /* UIView+print.swift */,
 				058E19A62CC50E21005906D0 /* CompareImageName.swift */,
 				058E19AB2CC51E8B005906D0 /* CustomStringConvertation.swift */,
 				0573F3F92CBEE87200C1E53B /* UIView+addSubviews.swift */,
@@ -208,11 +208,11 @@
 				0573F3F62CBEE57C00C1E53B /* PersonManager.swift in Sources */,
 				05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */,
 				058E19AC2CC51E8B005906D0 /* CustomStringConvertation.swift in Sources */,
-				058E19AE2CC520A9005906D0 /* PrintDescription.swift in Sources */,
 				05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */,
 				058E19A72CC50E21005906D0 /* CompareImageName.swift in Sources */,
-				054A0B8A2CB967B30092F192 /* TeamData.swift in Sources */,
+				054A0B8A2CB967B30092F192 /* PersonModel.swift in Sources */,
 				054A0B8E2CB96D850092F192 /* UIStackView+addStackViews.swift in Sources */,
+				0565FE1A2CC6C57C007BEFCA /* UIView+print.swift in Sources */,
 				05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */,
 				054A0B902CB9745E0092F192 /* ImageView.swift in Sources */,
 				0573F3F82CBEE64500C1E53B /* PersonDataManager.swift in Sources */,

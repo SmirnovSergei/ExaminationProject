@@ -8,6 +8,7 @@
 import UIKit
 
 class ImageView: UIImageView {
+    var imageNameInstance: String?
     
     init(imageName: String) {
         super.init(frame: .zero)
