@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    func printButtonViewsQuantity(_ views: UIView...) -> Int {
+    func getButtonViewsQuantity(_ views: UIView...) -> Int {
         var buttonViewQuantity = 0
         
         for view in views {
@@ -16,9 +16,6 @@ extension UIView {
                 buttonViewQuantity += 1
             }
         }
-        
-        print("Количество переданных вьюшек UIButton (с жёлтым незаюзанным ворнингом) = \(buttonViewQuantity)\n")
-        
         return buttonViewQuantity
     }
     

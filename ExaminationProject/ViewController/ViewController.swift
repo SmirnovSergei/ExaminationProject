@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
         imageView.imageNameInstance = "Image view"
 
-        view.printButtonViewsQuantity(lastButton, nextButton, firstButton)
+        print("Количество переданных вьюшек UIButton = \(view.getButtonViewsQuantity(lastButton, nextButton, firstButton))\n")
         view.printAllSubviews(lastButton, nextButton, firstButton, imageView)
 
         view.backgroundColor = .white
