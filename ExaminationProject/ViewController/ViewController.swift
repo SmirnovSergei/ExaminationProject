@@ -27,7 +27,6 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupViews()
-		addAction()
 		setupLayout()
 	}
 
@@ -45,49 +44,26 @@ class ViewController: UIViewController {
 	}
 }
 
-// MARK: - Button's Action
-private extension ViewController {
-	func addAction() {
-		let lastAction = UIAction { _ in
-			if let lastPerson = self.personData?.getLastPerson() {
-				self.setPersonQueue(lastPerson)
-				self.imageLabel.isHidden = true
-			}
-		}
-
-		let nextAction = UIAction { _ in
-			if let nextPerson = self.personData?.getNextPerson() {
-				self.setPersonQueue(nextPerson)
-				self.imageLabel.isHidden = true
-			}
-		}
-
-		let firstAction = UIAction { _ in
-			if let firstPerson = self.personData?.getFirstPerson() {
-				self.setPersonQueue(firstPerson)
-				self.imageLabel.isHidden = true
-			}
-		}
-
-		lastButton.addAction(lastAction, for: .touchUpInside)
-		nextButton.addAction(nextAction, for: .touchUpInside)
-		firstButton.addAction(firstAction, for: .touchUpInside)
-	}
-
-	func setPersonQueue(_ personQueue: PersonModel) {
-		let personQueue = personQueue
-		self.imageView.updateImage(personQueue.imageName)
-		self.positionLabel.text = personQueue.position
-		self.textLabel.text = personQueue.information
-	}
-}
-
 // MARK: - Setup Views
 private extension ViewController {
 	func setupViews() {
 		view.backgroundColor = .white
 		setupStackViews()
 		setupLabels()
+
+		[lastButton, 
+         nextButton,
+         firstButton].forEach { button in
+			button.delegate = self
+		}
+
+		lastButton.buttonNameInstance = "Last button"
+		nextButton.buttonNameInstance = "Next button"
+		firstButton.buttonNameInstance = "First button"
+		imageView.imageNameInstance = "Image view"
+
+		print("Количество переданных вьюшек UIButton = \(view.getButtonViewsQuantity(lastButton, nextButton, firstButton))\n")
+		view.printAllSubviews(lastButton, nextButton, firstButton, imageView)
 
 		view.addSubviews(vStackView, imageLabel, hStackView, firstButton)
 	}
@@ -124,6 +100,39 @@ private extension ViewController {
 
 		vStackView.addStackViews(imageView, positionLabel, textLabel)
 		hStackView.addStackViews(lastButton, nextButton)
+	}
+}
+
+// MARK: - ICustomButtonDelegate
+extension ViewController: ICustomButtonDelegate {
+	func pressedButton(_ button: UIButton) {
+		switch button {
+		case lastButton:
+			if let lastPerson = self.personData?.getLastPerson() {
+				self.setPersonQueue(lastPerson)
+			}
+
+		case nextButton:
+			if let nextPerson = self.personData?.getNextPerson() {
+				self.setPersonQueue(nextPerson)
+			}
+
+		case firstButton:
+			if let firstPerson = self.personData?.getFirstPerson() {
+				self.setPersonQueue(firstPerson)
+			}
+
+		default:
+			break
+		}
+	}
+
+	func setPersonQueue(_ personQueue: PersonModel) {
+		let personQueue = personQueue
+		self.imageView.updateImage(personQueue.imageName)
+		self.positionLabel.text = personQueue.position
+		self.textLabel.text = personQueue.information
+		self.imageLabel.isHidden = true
 	}
 }
 
