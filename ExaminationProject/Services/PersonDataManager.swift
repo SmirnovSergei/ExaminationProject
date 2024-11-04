@@ -45,4 +45,13 @@ class PersonDataManager: PersonManageable {
             
         return getCurrentPerson()
     }
+    
+    func getPersonModelByImageName(_ imageName: String) -> PersonModel? {
+        for person in persons {
+            if imageName == getCurrentPerson().imageName {
+            }
+            return person
+        }
+        return nil
+    }
 }
