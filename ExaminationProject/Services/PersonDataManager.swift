@@ -12,6 +12,7 @@ protocol PersonManageable {
     func getLastPerson() -> PersonModel
     func getNextPerson() -> PersonModel
     func getFirstPerson() -> PersonModel
+    func getPersonModelByImageName(_ imageName: String) -> PersonModel?
 }
 
 class PersonDataManager: PersonManageable {
@@ -41,16 +42,16 @@ class PersonDataManager: PersonManageable {
     }
     
     func getFirstPerson() -> PersonModel {
-            currentIndex = 0
-            
+        currentIndex = 0
+        
         return getCurrentPerson()
     }
     
     func getPersonModelByImageName(_ imageName: String) -> PersonModel? {
         for person in persons {
-            if imageName == getCurrentPerson().imageName {
+            if person.imageName == imageName {
+                return person
             }
-            return person
         }
         return nil
     }

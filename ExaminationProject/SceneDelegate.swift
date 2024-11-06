@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let personData = PersonDataManager(persons: PersonManager().getPersons())
-        let viewController = ViewController()
+//        let viewController = ViewController()
+        let viewController = FindImageViewController()
         viewController.personData = personData
         
         printDescription()
