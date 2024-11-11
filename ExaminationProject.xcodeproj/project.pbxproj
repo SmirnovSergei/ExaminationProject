@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0544D7E62CE27471004BB216 /* PanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544D7E52CE27471004BB216 /* PanImageViewController.swift */; };
 		054A0B8A2CB967B30092F192 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B892CB967B30092F192 /* PersonModel.swift */; };
 		054A0B8C2CB9697C0092F192 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8B2CB9697C0092F192 /* CustomButton.swift */; };
 		054A0B8E2CB96D850092F192 /* UIStackView+addStackViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8D2CB96D850092F192 /* UIStackView+addStackViews.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0544D7E52CE27471004BB216 /* PanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanImageViewController.swift; sourceTree = "<group>"; };
 		054A0B892CB967B30092F192 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		054A0B8B2CB9697C0092F192 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		054A0B8D2CB96D850092F192 /* UIStackView+addStackViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+addStackViews.swift"; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				05EF52132CB95C8900F68BE5 /* ViewController.swift */,
+				0544D7E52CE27471004BB216 /* PanImageViewController.swift */,
 				05568A3F2CD9218A0035C0F9 /* FindImageViewController.swift */,
 			);
 			path = ViewController;
@@ -211,6 +214,7 @@
 				05568A402CD9218A0035C0F9 /* FindImageViewController.swift in Sources */,
 				0573F3F62CBEE57C00C1E53B /* PersonManager.swift in Sources */,
 				05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */,
+				0544D7E62CE27471004BB216 /* PanImageViewController.swift in Sources */,
 				058E19AC2CC51E8B005906D0 /* CustomStringConvertation.swift in Sources */,
 				05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */,
 				058E19A72CC50E21005906D0 /* CompareImageName.swift in Sources */,

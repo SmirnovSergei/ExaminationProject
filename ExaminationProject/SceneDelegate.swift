@@ -15,12 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        // Создаем окно для сцена
+        // Создаем окно для сцены
         window = UIWindow(windowScene: windowScene)
         
         let personData = PersonDataManager(persons: PersonManager().getPersons())
 //        let viewController = ViewController()
-        let viewController = FindImageViewController()
+//        let viewController = FindImageViewController()
+        let viewController = PanImageViewController()
         viewController.personData = personData
         
         printDescription()
