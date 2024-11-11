@@ -13,6 +13,7 @@ protocol PersonManageable {
     func getNextPerson() -> PersonModel
     func getFirstPerson() -> PersonModel
     func getPersonModelByImageName(_ imageName: String) -> PersonModel?
+    func getRandomPerson() -> PersonModel
 }
 
 class PersonDataManager: PersonManageable {
@@ -54,5 +55,12 @@ class PersonDataManager: PersonManageable {
             }
         }
         return nil
+    }
+    
+    func getRandomPerson() -> PersonModel {
+        for _ in persons {
+            currentIndex = Int.random(in: 0...(persons.count - 1))
+        }
+        return getCurrentPerson()
     }
 }
