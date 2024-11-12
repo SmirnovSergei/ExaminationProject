@@ -8,21 +8,21 @@
 import UIKit
 
 class PanImageViewController: UIViewController {
-    
     private let imageView = ImageView(imageName: "")
+    
     private let panGestureRecognizer = UIPanGestureRecognizer()
     private var panGestureAnchorPoint: CGPoint?
     
     private var centerXConstraint: NSLayoutConstraint!
-    private var centerYConstraint: NSLayoutConstraint!
+    private var topConstraint: NSLayoutConstraint!
     
     var personData: PersonManageable?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupImageView()
-        getRandomImage()
         setupLayout()
         setupGestureRecognizer()
     }
@@ -42,7 +42,7 @@ class PanImageViewController: UIViewController {
             let gesturePoint = gestureRecognizer.location(in: view)
             
             centerXConstraint.constant += gesturePoint.x - panGestureAnchorPoint.x
-            centerYConstraint.constant += gesturePoint.y - panGestureAnchorPoint.y
+            topConstraint.constant += gesturePoint.y - panGestureAnchorPoint.y
             self.panGestureAnchorPoint = gesturePoint
         case .cancelled, .ended:
             panGestureAnchorPoint = nil
@@ -52,24 +52,41 @@ class PanImageViewController: UIViewController {
             break
         }
     }
+}
+
+// MARK: - Constants
+private extension PanImageViewController {
+    enum Constants {
+        static let imageViewCornerRadius: CGFloat = 30.0
+        static let initialImageViewDimSize: CGFloat = 250.0
+    }
+}
+
+// MARK: - Setting View
+private extension PanImageViewController {
+    func setupImageView() {
+        imageView.layer.cornerRadius = Constants.imageViewCornerRadius
+        getRandomImage()
+        
+        view.addSubview(imageView)
+    }
     
     func getRandomImage() {
         let person = personData?.getRandomPerson()
         imageView.image = UIImage(named: person?.imageName ?? "")
     }
     
-    private func setupImageView() {
-        view.addSubview(imageView)
-        imageView.layer.cornerRadius = Constants.imageViewCornerRadius
-    }
-    
-    private func setupGestureRecognizer() {
+    func setupGestureRecognizer() {
         panGestureRecognizer.addTarget(self, action: #selector(handlePanGesture(_:)))
         
+        imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(panGestureRecognizer)
     }
-    
-    private func setupLayout() {
+}
+
+// MARK: - Setup Layout
+private extension PanImageViewController {
+    func setupLayout() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         let widthConstraint = imageView.widthAnchor.constraint(
@@ -79,21 +96,13 @@ class PanImageViewController: UIViewController {
             equalToConstant: Constants.initialImageViewDimSize
         )
         centerXConstraint = imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        
-        centerYConstraint = imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        topConstraint = imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100)
         
         NSLayoutConstraint.activate([
             widthConstraint,
             heightConstraint,
             centerXConstraint,
-            centerYConstraint
+            topConstraint
         ])
-    }
-}
-
-private extension PanImageViewController {
-    enum Constants {
-        static let imageViewCornerRadius: CGFloat = 30.0
-        static let initialImageViewDimSize: CGFloat = 250.0
     }
 }
