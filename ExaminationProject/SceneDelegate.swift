@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let personData = PersonDataManager(persons: PersonManager().getPersons())
-        let viewController = PanImageViewController()
+        let viewController = LicenseAgreementViewController()
         viewController.personData = personData
         
         printDescription()
