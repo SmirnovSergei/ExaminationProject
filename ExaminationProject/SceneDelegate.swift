@@ -18,9 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Создаем окно для сцены
         window = UIWindow(windowScene: windowScene)
         
-        let personData = PersonDataManager(persons: PersonManager().getPersons())
+//        let personData = PersonDataManager(persons: PersonManager().getPersons())
+        let licenseText = LicenseDataManager(licenseAgreement: LicenseManager().getLicenseText())
         let viewController = LicenseAgreementViewController()
-        viewController.personData = personData
+        viewController.licenseAgreement = licenseText
+//        viewController.personData = personData
         
         printDescription()
         

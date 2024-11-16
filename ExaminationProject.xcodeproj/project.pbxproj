@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050AC9B72CE692650079D4A3 /* LicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050AC9B62CE692650079D4A3 /* LicenseManager.swift */; };
+		050AC9B92CE692D50079D4A3 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050AC9B82CE692D50079D4A3 /* CustomLabel.swift */; };
 		0544D7E62CE27471004BB216 /* PanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544D7E52CE27471004BB216 /* PanImageViewController.swift */; };
 		054A0B8A2CB967B30092F192 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B892CB967B30092F192 /* PersonModel.swift */; };
 		054A0B8C2CB9697C0092F192 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A0B8B2CB9697C0092F192 /* CustomButton.swift */; };
@@ -25,9 +27,13 @@
 		05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */; };
 		05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52132CB95C8900F68BE5 /* ViewController.swift */; };
 		05EF521C2CB95C8B00F68BE5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05EF521B2CB95C8B00F68BE5 /* Base */; };
+		05F1E6512CE8B3A20035703C /* LicenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1E6502CE8B3A20035703C /* LicenseModel.swift */; };
+		05F1E6532CE8B54D0035703C /* LicenseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1E6522CE8B54D0035703C /* LicenseDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050AC9B62CE692650079D4A3 /* LicenseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseManager.swift; sourceTree = "<group>"; };
+		050AC9B82CE692D50079D4A3 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		0544D7E52CE27471004BB216 /* PanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanImageViewController.swift; sourceTree = "<group>"; };
 		054A0B892CB967B30092F192 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		054A0B8B2CB9697C0092F192 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -48,6 +54,8 @@
 		05EF52132CB95C8900F68BE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05EF521B2CB95C8B00F68BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05EF521D2CB95C8B00F68BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05F1E6502CE8B3A20035703C /* LicenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseModel.swift; sourceTree = "<group>"; };
+		05F1E6522CE8B54D0035703C /* LicenseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 			children = (
 				054A0B8F2CB9745E0092F192 /* ImageView.swift */,
 				054A0B8B2CB9697C0092F192 /* CustomButton.swift */,
+				050AC9B82CE692D50079D4A3 /* CustomLabel.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -87,6 +96,9 @@
 				054A0B892CB967B30092F192 /* PersonModel.swift */,
 				0573F3F52CBEE57C00C1E53B /* PersonManager.swift */,
 				0573F3F72CBEE64500C1E53B /* PersonDataManager.swift */,
+				05F1E6502CE8B3A20035703C /* LicenseModel.swift */,
+				050AC9B62CE692650079D4A3 /* LicenseManager.swift */,
+				05F1E6522CE8B54D0035703C /* LicenseDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -216,6 +228,7 @@
 				0573F3FA2CBEE87300C1E53B /* UIView+addSubviews.swift in Sources */,
 				05568A402CD9218A0035C0F9 /* FindImageViewController.swift in Sources */,
 				0573F3F62CBEE57C00C1E53B /* PersonManager.swift in Sources */,
+				05F1E6512CE8B3A20035703C /* LicenseModel.swift in Sources */,
 				05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */,
 				0544D7E62CE27471004BB216 /* PanImageViewController.swift in Sources */,
 				058E19AC2CC51E8B005906D0 /* CustomStringConvertation.swift in Sources */,
@@ -223,8 +236,11 @@
 				058E19A72CC50E21005906D0 /* CompareImageName.swift in Sources */,
 				054A0B8A2CB967B30092F192 /* PersonModel.swift in Sources */,
 				0580DE9C2CE3F924006AABFB /* LicenseAgreementViewController.swift in Sources */,
+				050AC9B92CE692D50079D4A3 /* CustomLabel.swift in Sources */,
 				054A0B8E2CB96D850092F192 /* UIStackView+addStackViews.swift in Sources */,
 				0565FE1A2CC6C57C007BEFCA /* UIView+print.swift in Sources */,
+				050AC9B72CE692650079D4A3 /* LicenseManager.swift in Sources */,
+				05F1E6532CE8B54D0035703C /* LicenseDataManager.swift in Sources */,
 				05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */,
 				054A0B902CB9745E0092F192 /* ImageView.swift in Sources */,
 				0573F3F82CBEE64500C1E53B /* PersonDataManager.swift in Sources */,
