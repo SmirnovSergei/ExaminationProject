@@ -28,7 +28,6 @@
 		05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52132CB95C8900F68BE5 /* ViewController.swift */; };
 		05EF521C2CB95C8B00F68BE5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05EF521B2CB95C8B00F68BE5 /* Base */; };
 		05F1E6512CE8B3A20035703C /* LicenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1E6502CE8B3A20035703C /* LicenseModel.swift */; };
-		05F1E6532CE8B54D0035703C /* LicenseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1E6522CE8B54D0035703C /* LicenseDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +54,6 @@
 		05EF521B2CB95C8B00F68BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05EF521D2CB95C8B00F68BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05F1E6502CE8B3A20035703C /* LicenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseModel.swift; sourceTree = "<group>"; };
-		05F1E6522CE8B54D0035703C /* LicenseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 				0573F3F72CBEE64500C1E53B /* PersonDataManager.swift */,
 				05F1E6502CE8B3A20035703C /* LicenseModel.swift */,
 				050AC9B62CE692650079D4A3 /* LicenseManager.swift */,
-				05F1E6522CE8B54D0035703C /* LicenseDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -240,7 +237,6 @@
 				054A0B8E2CB96D850092F192 /* UIStackView+addStackViews.swift in Sources */,
 				0565FE1A2CC6C57C007BEFCA /* UIView+print.swift in Sources */,
 				050AC9B72CE692650079D4A3 /* LicenseManager.swift in Sources */,
-				05F1E6532CE8B54D0035703C /* LicenseDataManager.swift in Sources */,
 				05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */,
 				054A0B902CB9745E0092F192 /* ImageView.swift in Sources */,
 				0573F3F82CBEE64500C1E53B /* PersonDataManager.swift in Sources */,

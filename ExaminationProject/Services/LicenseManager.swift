@@ -7,8 +7,12 @@
 
 import UIKit
 
-class LicenseManager {
-    func getLicenseText() -> LicenseModel {
+protocol ILicenseAgreement {
+    func getLicenseAgreement() -> LicenseModel
+}
+
+class LicenseManager: ILicenseAgreement {
+    func getLicenseAgreement() -> LicenseModel {
         LicenseModel(title: "LICENSED APPLICATION END USER LICENSE AGREEMENT",
                      text: """
         Apps made available through the App Store are licensed, not sold, to you.

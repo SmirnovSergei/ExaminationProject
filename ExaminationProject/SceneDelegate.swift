@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
 //        let personData = PersonDataManager(persons: PersonManager().getPersons())
-        let licenseText = LicenseDataManager(licenseAgreement: LicenseManager().getLicenseText())
+        let licenseText = LicenseManager()
         let viewController = LicenseAgreementViewController()
         viewController.licenseAgreement = licenseText
 //        viewController.personData = personData
