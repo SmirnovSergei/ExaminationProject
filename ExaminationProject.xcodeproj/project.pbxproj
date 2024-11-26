@@ -28,6 +28,7 @@
 		05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52132CB95C8900F68BE5 /* ViewController.swift */; };
 		05EF521C2CB95C8B00F68BE5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05EF521B2CB95C8B00F68BE5 /* Base */; };
 		05F1E6512CE8B3A20035703C /* LicenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1E6502CE8B3A20035703C /* LicenseModel.swift */; };
+		05F9A5792CF673DF00D31CAC /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9A5782CF673DF00D31CAC /* ImageListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		05EF521B2CB95C8B00F68BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05EF521D2CB95C8B00F68BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05F1E6502CE8B3A20035703C /* LicenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseModel.swift; sourceTree = "<group>"; };
+		05F9A5782CF673DF00D31CAC /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				05EF52132CB95C8900F68BE5 /* ViewController.swift */,
+				05F9A5782CF673DF00D31CAC /* ImageListViewController.swift */,
 				0580DE9B2CE3F924006AABFB /* LicenseAgreementViewController.swift */,
 				0544D7E52CE27471004BB216 /* PanImageViewController.swift */,
 				05568A3F2CD9218A0035C0F9 /* FindImageViewController.swift */,
@@ -232,6 +235,7 @@
 				05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */,
 				058E19A72CC50E21005906D0 /* CompareImageName.swift in Sources */,
 				054A0B8A2CB967B30092F192 /* PersonModel.swift in Sources */,
+				05F9A5792CF673DF00D31CAC /* ImageListViewController.swift in Sources */,
 				0580DE9C2CE3F924006AABFB /* LicenseAgreementViewController.swift in Sources */,
 				050AC9B92CE692D50079D4A3 /* CustomLabel.swift in Sources */,
 				054A0B8E2CB96D850092F192 /* UIStackView+addStackViews.swift in Sources */,
