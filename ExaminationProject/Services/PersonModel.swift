@@ -8,18 +8,19 @@
 import UIKit
 
 struct PersonModel {
-    let imageName: String
-    let position: String
-    let firstName: String
-    let lastName: String
-    let age: Int
-    let info: String
-    
-    var fullName: String {
-        firstName + " " + lastName
-    }
-    
-    var information: String {
-        "\(fullName)\nВозраст: \(age)\n\(info)"
-    }
+	let imageName: String
+	let position: String
+	let firstName: String
+	let lastName: String
+	let age: Int
+	let info: String
+	var isMark: Bool
+
+	var fullName: String {
+		firstName + " " + lastName
+	}
+
+	var information: String {
+		"\(fullName)\nВозраст: \(age)\n\(info)"
+	}
 }

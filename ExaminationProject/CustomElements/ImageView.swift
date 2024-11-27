@@ -8,28 +8,28 @@
 import UIKit
 
 class ImageView: UIImageView {
-    var imageNameInstance: String?
-    
-    init(imageName: String) {
-        super.init(frame: .zero)
-        setupImageView(imageName)
-    }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+	var imageNameInstance: String?
 
-    func updateImage(_ imageName: String) {
-        image = UIImage(named: imageName)
-    }
+	init(imageName: String) {
+		super.init(frame: .zero)
+		setupImageView(imageName)
+	}
+
+	@available(*, unavailable)
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
+	func updateImage(_ imageName: String) {
+		image = UIImage(named: imageName)
+	}
 }
 
-// MARK: - Setup Image View
+	// MARK: - Setup Image View
 private extension ImageView {
-    func setupImageView(_ imageName: String) {
-        image = UIImage(named: imageName)
-        clipsToBounds = true
-        contentMode = .scaleAspectFit
-    }
+	func setupImageView(_ imageName: String) {
+		image = UIImage(named: imageName)
+		clipsToBounds = true
+		contentMode = .scaleAspectFit
+	}
 }

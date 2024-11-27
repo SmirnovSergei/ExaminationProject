@@ -8,6 +8,6 @@
 import UIKit
 
 struct LicenseModel {
-    let title: String
-    let text: String
+	let title: String
+	let text: String
 }

@@ -9,13 +9,13 @@ import UIKit
 
 class FindImageViewController: UIViewController {
 
-    private let textLabel = UILabel()
-    private let textField = UITextField()
-    private let imageInfoLabel = UILabel()
-    
-    private let checkButton = UIButton()
-    
-    private let imageView = ImageView(imageName: "")
+	private let textLabel = UILabel()
+	private let textField = UITextField()
+	private let imageInfoLabel = UILabel()
+
+	private let checkButton = UIButton()
+
+	private let imageView = ImageView(imageName: "")
     
     var personData: PersonManageable?
     
