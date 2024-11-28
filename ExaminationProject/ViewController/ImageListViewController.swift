@@ -35,6 +35,10 @@ extension ImageListViewController: UITableViewDataSource {
 		configuration.image = UIImage(named: person?.imageName ?? "")
 		configuration.text = person?.fullName
 		configuration.secondaryText = person?.position
+		configuration.imageProperties.maximumSize = CGSize(width: 40, height: 40)
+		configuration.imageProperties.reservedLayoutSize = CGSize(width: 40, height: 40)
+		
+		configuration.imageToTextPadding = 20
 
 		if person?.isMark == true {
 			cell.accessoryType = .checkmark
