@@ -17,6 +17,7 @@ protocol PersonManageable {
 	func getAllPersons() -> [PersonModel]
 	func removePerson(index: Int)
 	func markPerson(index: Int)
+	func getIsMarkPersons() -> [PersonModel]
 }
 
 class PersonDataManager: PersonManageable {
@@ -77,5 +78,15 @@ class PersonDataManager: PersonManageable {
 
 	func markPerson(index: Int) {
 		persons[index].isMark.toggle()
+	}
+	
+	func getIsMarkPersons() -> [PersonModel] {
+		var isMarkPersons = [PersonModel]()
+		for person in persons {
+			if person.isMark {
+				isMarkPersons.append(person)
+			}
+		}
+		return isMarkPersons
 	}
 }

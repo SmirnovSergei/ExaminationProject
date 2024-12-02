@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			// Создаем окно для сцены
 		window = UIWindow(windowScene: windowScene)
 
-		let viewController = ImageListViewController()
+		let viewController = MarTableViewController()
 		viewController.personData = buildPersonManager()
 
 		printDescription()

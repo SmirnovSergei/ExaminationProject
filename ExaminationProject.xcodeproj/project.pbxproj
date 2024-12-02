@@ -23,6 +23,8 @@
 		058E19A72CC50E21005906D0 /* CompareImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058E19A62CC50E21005906D0 /* CompareImageName.swift */; };
 		058E19A92CC50FE2005906D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058E19A82CC50FE2005906D0 /* Assets.xcassets */; };
 		058E19AC2CC51E8B005906D0 /* CustomStringConvertation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058E19AB2CC51E8B005906D0 /* CustomStringConvertation.swift */; };
+		05E81AEA2CFCF8DE0078433F /* MarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E81AE92CFCF8DE0078433F /* MarTableViewController.swift */; };
+		05E81AEC2CFCFD420078433F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E81AEB2CFCFD420078433F /* CustomCell.swift */; };
 		05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF520F2CB95C8900F68BE5 /* AppDelegate.swift */; };
 		05EF52122CB95C8900F68BE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */; };
 		05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF52132CB95C8900F68BE5 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		058E19A62CC50E21005906D0 /* CompareImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareImageName.swift; sourceTree = "<group>"; };
 		058E19A82CC50FE2005906D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058E19AB2CC51E8B005906D0 /* CustomStringConvertation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStringConvertation.swift; sourceTree = "<group>"; };
+		05E81AE92CFCF8DE0078433F /* MarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarTableViewController.swift; sourceTree = "<group>"; };
+		05E81AEB2CFCFD420078433F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		05EF520C2CB95C8900F68BE5 /* ExaminationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExaminationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EF520F2CB95C8900F68BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EF52112CB95C8900F68BE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				05EF52132CB95C8900F68BE5 /* ViewController.swift */,
+				05E81AE92CFCF8DE0078433F /* MarTableViewController.swift */,
 				05F9A5782CF673DF00D31CAC /* ImageListViewController.swift */,
 				0580DE9B2CE3F924006AABFB /* LicenseAgreementViewController.swift */,
 				0544D7E52CE27471004BB216 /* PanImageViewController.swift */,
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				054A0B8F2CB9745E0092F192 /* ImageView.swift */,
+				05E81AEB2CFCFD420078433F /* CustomCell.swift */,
 				054A0B8B2CB9697C0092F192 /* CustomButton.swift */,
 				050AC9B82CE692D50079D4A3 /* CustomLabel.swift */,
 			);
@@ -227,6 +233,7 @@
 			files = (
 				0573F3FA2CBEE87300C1E53B /* UIView+addSubviews.swift in Sources */,
 				05568A402CD9218A0035C0F9 /* FindImageViewController.swift in Sources */,
+				05E81AEC2CFCFD420078433F /* CustomCell.swift in Sources */,
 				0573F3F62CBEE57C00C1E53B /* PersonManager.swift in Sources */,
 				05F1E6512CE8B3A20035703C /* LicenseModel.swift in Sources */,
 				05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */,
@@ -234,6 +241,7 @@
 				058E19AC2CC51E8B005906D0 /* CustomStringConvertation.swift in Sources */,
 				05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */,
 				058E19A72CC50E21005906D0 /* CompareImageName.swift in Sources */,
+				05E81AEA2CFCF8DE0078433F /* MarTableViewController.swift in Sources */,
 				054A0B8A2CB967B30092F192 /* PersonModel.swift in Sources */,
 				05F9A5792CF673DF00D31CAC /* ImageListViewController.swift in Sources */,
 				0580DE9C2CE3F924006AABFB /* LicenseAgreementViewController.swift in Sources */,
