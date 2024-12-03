@@ -30,7 +30,7 @@ class CustomCell: UITableViewCell {
 		positionLabel.text = person.position
 		photo.image = UIImage(named: person.imageName)
 		
-		let checkmark = person.isMark ? "checkmark.square.fill" : "checkmark"
+		let checkmark = person.isMark ? "checkmark.square.fill" : "checkmark.square"
 		markButton.setImage(UIImage(systemName: checkmark), for: .normal)
 	}
 }
