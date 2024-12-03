@@ -24,3 +24,5 @@ struct PersonModel {
 		"\(fullName)\nВозраст: \(age)\n\(info)"
 	}
 }
+
+extension PersonModel: Equatable {}

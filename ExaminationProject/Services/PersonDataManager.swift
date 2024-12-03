@@ -18,6 +18,7 @@ protocol PersonManageable {
 	func removePerson(index: Int)
 	func markPerson(index: Int)
 	func getIsMarkPersons() -> [PersonModel]
+	func toggleMark(_ person: PersonModel)
 }
 
 class PersonDataManager: PersonManageable {
@@ -28,6 +29,12 @@ class PersonDataManager: PersonManageable {
 		self.persons = persons
 	}
 
+	func toggleMark(_ person: PersonModel) {
+		if let index = persons.firstIndex(of: person) {
+			persons[index].isMark.toggle()
+		}
+	}
+	
 	func getAllPersons() -> [PersonModel] {
 		persons
 	}
