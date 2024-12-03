@@ -26,9 +26,19 @@ class MarTableViewController: UITableViewController {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CustomCell else {
 			return UITableViewCell()
 		}
+		
 		if let person = personData?.getIsMarkPersons()[indexPath.row] {
 			
 			cell.configure(person: person)
+		}
+		
+		cell.checkmarkTapped = { cell in
+			if let indexPath = tableView.indexPath(for: cell) {
+				if let person = self.personData?.getIsMarkPersons()[indexPath.row] {
+					self.personData?.toggleMark(person)
+				}
+				tableView.deleteRows(at: [indexPath], with: .automatic)
+			}
 		}
 		
 		return cell

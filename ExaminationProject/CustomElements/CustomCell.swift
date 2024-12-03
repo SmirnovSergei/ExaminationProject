@@ -13,7 +13,10 @@ class CustomCell: UITableViewCell {
 	private let positionLabel = UILabel()
 	
 	private let photo = UIImageView()
-	private let markButton = UIButton()
+	private let checkmarkButton = UIButton()
+	private var toggleCheckmark = false
+	
+	var checkmarkTapped: ((UITableViewCell) -> ())?
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -25,20 +28,37 @@ class CustomCell: UITableViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	@objc
+	private func toggleMarkButton() {
+		toggleCheckmark.toggle()
+		let checkmark = toggleCheckmark ? "checkmark.square.fill" : "checkmark.square"
+		checkmarkButton.setImage(UIImage(systemName: checkmark), for: .normal)
+		
+		checkmarkTapped?(self)
+	}
+
 	func configure(person: PersonModel) {
 		fullNameLabel.text = person.fullName
 		positionLabel.text = person.position
 		photo.image = UIImage(named: person.imageName)
+		toggleCheckmark = person.isMark
 		
-		let checkmark = person.isMark ? "checkmark.square.fill" : "checkmark.square"
-		markButton.setImage(UIImage(systemName: checkmark), for: .normal)
+		let checkmark = toggleCheckmark ? "checkmark.square.fill" : "checkmark.square"
+		checkmarkButton.setImage(UIImage(systemName: checkmark), for: .normal)
+		
+		checkmarkButton.addTarget(self, action: #selector(toggleMarkButton), for: .touchUpInside)
 	}
 }
 
 	//MARK: - Setting
 private extension CustomCell {
 	func setup() {
-		contentView.addSubviews(fullNameLabel, positionLabel, photo, markButton)
+		contentView.addSubviews(
+			fullNameLabel,
+			positionLabel,
+			photo,
+			checkmarkButton
+		)
 		setupFullNameLabel()
 		setupPositionLabel()
 		setupPhoto()
@@ -65,14 +85,17 @@ private extension CustomCell {
 	}
 	
 	func setupMarkButton() {
-		markButton.tintColor = .systemTeal
+		checkmarkButton.tintColor = .systemTeal
 	}
 }
 
 //MARK: - Layout
 private extension CustomCell {
 	func setupLayout() {
-		[fullNameLabel, positionLabel, photo, markButton].forEach { view in
+		[fullNameLabel, 
+		 positionLabel,
+		 photo,
+		 checkmarkButton].forEach { view in
 			view.translatesAutoresizingMaskIntoConstraints = false
 			
 			NSLayoutConstraint.activate([
@@ -82,16 +105,16 @@ private extension CustomCell {
 				
 				fullNameLabel.leadingAnchor.constraint(equalTo: photo.trailingAnchor, constant: 16),
 				fullNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-				fullNameLabel.trailingAnchor.constraint(lessThanOrEqualTo: markButton.leadingAnchor, constant: -8),
+				fullNameLabel.trailingAnchor.constraint(lessThanOrEqualTo: checkmarkButton.leadingAnchor, constant: -8),
 				
 				positionLabel.leadingAnchor.constraint(equalTo: fullNameLabel.leadingAnchor),
 				positionLabel.topAnchor.constraint(equalTo: fullNameLabel.bottomAnchor, constant: 4),
 				positionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
 				
-				markButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-				markButton.centerYAnchor.constraint(equalTo: fullNameLabel.centerYAnchor),
-				markButton.widthAnchor.constraint(equalToConstant: 24),
-				markButton.heightAnchor.constraint(equalToConstant: 24)
+				checkmarkButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+				checkmarkButton.centerYAnchor.constraint(equalTo: fullNameLabel.centerYAnchor),
+				checkmarkButton.widthAnchor.constraint(equalToConstant: 24),
+				checkmarkButton.heightAnchor.constraint(equalToConstant: 24)
 			])
 		}
 	}
