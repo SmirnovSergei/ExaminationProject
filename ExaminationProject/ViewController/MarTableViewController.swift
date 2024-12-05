@@ -15,6 +15,8 @@ class MarTableViewController: UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		view.backgroundColor = .darkGray
+		tableView.separatorStyle = .none
 		tableView.register(CustomCell.self, forCellReuseIdentifier: cellIdentifier)
 	}
 	
@@ -29,16 +31,17 @@ class MarTableViewController: UITableViewController {
 		
 		if let person = personData?.getIsMarkPersons()[indexPath.row] {
 			
-			cell.configure(person: person)
-		}
-		
-		cell.checkmarkTapped = { cell in
-			if let indexPath = tableView.indexPath(for: cell) {
-				if let person = self.personData?.getIsMarkPersons()[indexPath.row] {
-					self.personData?.toggleMark(person)
+			cell.action = { myCell in
+				if let index = tableView.indexPath(for: myCell) {
+					if let person = self.personData?.getIsMarkPersons()[index.row] {
+						self.personData?.toggleMark(person)
+						self.tableView.deleteRows(at: [index], with: .automatic)
+					}
 				}
-				tableView.deleteRows(at: [indexPath], with: .automatic)
 			}
+			cell.selectionStyle = .none
+			
+			cell.configure(person: person)
 		}
 		
 		return cell
@@ -48,5 +51,3 @@ class MarTableViewController: UITableViewController {
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
 }
-
-

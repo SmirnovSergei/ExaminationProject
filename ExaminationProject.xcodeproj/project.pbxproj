@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05010EAD2D0239AF0041DE73 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05010EAC2D0239AF0041DE73 /* CustomView.swift */; };
 		050AC9B72CE692650079D4A3 /* LicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050AC9B62CE692650079D4A3 /* LicenseManager.swift */; };
 		050AC9B92CE692D50079D4A3 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050AC9B82CE692D50079D4A3 /* CustomLabel.swift */; };
 		0544D7E62CE27471004BB216 /* PanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544D7E52CE27471004BB216 /* PanImageViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05010EAC2D0239AF0041DE73 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		050AC9B62CE692650079D4A3 /* LicenseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseManager.swift; sourceTree = "<group>"; };
 		050AC9B82CE692D50079D4A3 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		0544D7E52CE27471004BB216 /* PanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanImageViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				054A0B8F2CB9745E0092F192 /* ImageView.swift */,
 				05E81AEB2CFCFD420078433F /* CustomCell.swift */,
+				05010EAC2D0239AF0041DE73 /* CustomView.swift */,
 				054A0B8B2CB9697C0092F192 /* CustomButton.swift */,
 				050AC9B82CE692D50079D4A3 /* CustomLabel.swift */,
 			);
@@ -239,6 +242,7 @@
 				05EF52142CB95C8900F68BE5 /* ViewController.swift in Sources */,
 				0544D7E62CE27471004BB216 /* PanImageViewController.swift in Sources */,
 				058E19AC2CC51E8B005906D0 /* CustomStringConvertation.swift in Sources */,
+				05010EAD2D0239AF0041DE73 /* CustomView.swift in Sources */,
 				05EF52102CB95C8900F68BE5 /* AppDelegate.swift in Sources */,
 				058E19A72CC50E21005906D0 /* CompareImageName.swift in Sources */,
 				05E81AEA2CFCF8DE0078433F /* MarTableViewController.swift in Sources */,
